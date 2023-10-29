@@ -60,10 +60,10 @@
         
           <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
         
-        <a class="nav-icon nav-search-btn" title="Suche"><span class="fa fa-search"></span></a>
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Suche"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
       </div>
     </div>
   </div>
@@ -71,6 +71,136 @@
 
       <div class="outer">
         <section id="main">
+  
+    <article id="post-操作符" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/10/29/%E6%93%8D%E4%BD%9C%E7%AC%A6/" class="article-date">
+  <time class="dt-published" datetime="2023-10-29T09:05:41.600Z" itemprop="datePublished">2023-10-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="操作符"><a href="#操作符" class="headerlink" title="操作符"></a>操作符</h1><p><strong>算数操作符</strong></p>
+<p>加  减  *  &#x2F;  %</p>
+<blockquote>
+<p>1.除了%操作符之外，其他的几个操作符可以作用于整数和浮点数</p>
+<p>2.对于&#x2F;操作符如果两个操作符都为整数，执行整数除法。而只要有浮点数</p>
+<p>执行的就是浮点数除法。</p>
+<p>3.%操作符的两个操作符必须为整数。返回的是整数之后的余数。</p>
+</blockquote>
+<p><strong>移位操作符</strong>（只能作用于整数）</p>
+<p>&lt;&lt;  左移操作符   &gt;&gt;右移操作符</p>
+<p>左移操作符：左边抛弃，右边补零</p>
+<p>右移操作符：移动的是二进制位</p>
+<p>整数的二进制表示有：原码，反码，补码</p>
+<p>存储到内存的是补码</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="variable">b</span> <span class="operator">=</span> a &gt;&gt; <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>1.算术右移：右边丢弃，左边补原符号位</p>
+<p>2.逻辑右移：右边丢弃，左边补0</p>
+</blockquote>
+<p><strong>注：</strong>对于移位运算符，不要移动负数位，这个是标准未定义的  int   num &#x3D; 10;  num&gt;&gt;-1;错误写法</p>
+<p><strong>位操作符</strong>（位：二进制位）</p>
+<p>&amp;  按位与（两个都为1才为1，有0则为0）        | 按位或 （只要有1就为1，两都为0才是0）        ^   按位异或（对应的二进制位相同为0，相异为1）</p>
+<p>它们的操作数必须是整数</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//交换两数，不用临时变量</span></span><br><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> <span class="variable">a</span> <span class="operator">=</span> <span class="number">3</span>;</span><br><span class="line">    <span class="type">int</span> <span class="variable">b</span> <span class="operator">=</span> <span class="number">5</span>;</span><br><span class="line">    printf(<span class="string">&quot;before: a=%d b=%d\n&quot;</span>,a,b);</span><br><span class="line">    a = a^b;</span><br><span class="line">    b = a^b;</span><br><span class="line">    a = a^b;</span><br><span class="line">    printf(<span class="string">&quot;after: a=%d b=%d\n&quot;</span>,a,b);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//计算一个整数二进制中有几个1</span></span><br><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> <span class="variable">num</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">    <span class="type">int</span> <span class="variable">count</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">    scanf(<span class="string">&quot;%d&quot;</span>,&amp;num);</span><br><span class="line">    <span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;<span class="number">32</span>;i++)<span class="comment">//32个bit位</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(<span class="number">1</span> == ((num &gt;&gt; i)&amp;<span class="number">1</span>))</span><br><span class="line">            count++;</span><br><span class="line">    &#125;</span><br><span class="line">    printf(<span class="string">&quot;%d\n&quot;</span>,count);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>赋值操作符</strong>：&#x3D;</p>
+<p><strong>复合赋值符</strong></p>
+<p>+&#x3D;   -&#x3D;  *&#x3D;  &#x2F;&#x3D;  %&#x3D;  &gt;&gt;&#x3D;  &lt;&lt;&#x3D;   &amp;&#x3D;   |&#x3D;   ^&#x3D;</p>
+<p><strong>单目操作符</strong>：（只有一个操作数）</p>
+<p>！逻辑反操作（真变假，假变真）</p>
+<p>-负值</p>
+<p>+正值</p>
+<p>&amp;   取地址</p>
+<p>sizeof    操作数的类型长度（以字节为单位）printf(“%d\n”,sizeof(a))  &#x2F;&#x2F;括号可以省略</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> arr[<span class="number">10</span>] = &#123;<span class="number">0</span>&#125;;</span><br><span class="line">printf(<span class="string">&quot;%d\n&quot;</span>,sizeof(arr));</span><br><span class="line">printf(<span class="string">&quot;%d\n&quot;</span>,sizeof(<span class="type">int</span> [<span class="number">10</span>]);<span class="number">10</span>*<span class="number">4</span> = <span class="number">40</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">short s = 0;</span><br><span class="line">int a = 10;</span><br><span class="line">printf(&quot;%d\n&quot;,sizeof(s = a + 5));//2,放在s里面，仍然为short</span><br><span class="line">printf(&quot;%d\n&quot;,s);//0</span><br></pre></td></tr></table></figure>
+
+
+
+<p>~    对一个数二进制按位取反</p>
+<p>–   前置，后置–</p>
+<p>++  前置（先++，后使用），后置++（先使用，再++）</p>
+<p>*间接访问操作符（解引用操作符）</p>
+<p>（类型）  强制类型转换</p>
+<p><strong>关系操作符</strong></p>
+<p>大于    &gt;&#x3D;   &lt;   &lt;&#x3D;  !&#x3D;  &#x3D;&#x3D;</p>
+<p><strong>逻辑操作符</strong></p>
+<p>&amp;&amp;  逻辑与（一个为假，便为假）最左边为假，不管后面是什么都不再计算</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="variable">a</span> <span class="operator">=</span> <span class="number">3</span>;</span><br><span class="line"><span class="type">int</span> <span class="variable">b</span> <span class="operator">=</span> <span class="number">5</span>;</span><br><span class="line"><span class="type">int</span> <span class="variable">c</span> <span class="operator">=</span> a &amp;&amp; b;</span><br><span class="line">printf(<span class="string">&quot;%d\n&quot;</span>,c);<span class="comment">//a，b均为真，输出结果为1</span></span><br></pre></td></tr></table></figure>
+
+<p>||   逻辑或（一个为真，便为真）最左边为真，后面不再计算</p>
+<p><strong>条件操作符</strong></p>
+<p>exp1 ? exp2 : exp3</p>
+<p><strong>逗号表达式</strong></p>
+<p>从左往右依次执行，整个表达式的结果是最后一个表达式的结果</p>
+<p>exp1,exp2,exp3,….expN</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1</span></span><br><span class="line"><span class="type">int</span> <span class="variable">a</span> <span class="operator">=</span> <span class="number">1</span>;</span><br><span class="line"><span class="type">int</span> <span class="variable">b</span> <span class="operator">=</span> <span class="number">2</span>;</span><br><span class="line"><span class="type">int</span> <span class="variable">c</span> <span class="operator">=</span> (a &gt; b,a=b+<span class="number">10</span>,a, b=a+<span class="number">1</span>);</span><br><span class="line">c输出<span class="number">13</span></span><br><span class="line"><span class="comment">//2</span></span><br><span class="line"><span class="keyword">if</span>(a=b+<span class="number">1</span>,c=a/<span class="number">2</span>,d&gt;<span class="number">0</span>)<span class="comment">//主要看d&gt;0</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>下标引用，函数调用和结构成员</strong></p>
+<p>1.[]下标引用操作符</p>
+<p>操作数：一个数组名+一个索引值</p>
+<p>eg: arr[9] &#x3D; 10;arr和9为两个操作数</p>
+<p>2.（）函数调用操作符 接受一个或者多个操作数；第一个操作数是函数名，剩余的操作数就是传递给函数的参数</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">get_max</span><span class="params">(<span class="type">int</span> x,<span class="type">int</span> y)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">return</span> x &gt; y ? x : y;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> <span class="variable">a</span> <span class="operator">=</span> <span class="number">10</span>;</span><br><span class="line">    <span class="type">int</span> <span class="variable">b</span> <span class="operator">=</span> <span class="number">20</span>;</span><br><span class="line">    <span class="comment">//调用函数的时候（）就是函数调用操作符</span></span><br><span class="line">    <span class="type">int</span> <span class="variable">max</span> <span class="operator">=</span> get_max(a,b);<span class="comment">//get_max,a,b为操作数</span></span><br><span class="line">    printf(<span class="string">&quot;max = %d\n&quot;</span>,max);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>3.访问一个结构的成员</p>
+<blockquote>
+<p>.结构体.成员名</p>
+<p>-&gt;结构体指针-&gt;成员名</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//创建一个结构体类型-struct Stu</span></span><br><span class="line">struct Stu</span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//成员变量</span></span><br><span class="line">    <span class="type">char</span> name[<span class="number">20</span>];</span><br><span class="line">    <span class="type">int</span> age;</span><br><span class="line">    <span class="type">char</span> id[<span class="number">20</span>];</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> <span class="variable">a</span> <span class="operator">=</span> <span class="number">10</span>;</span><br><span class="line">    <span class="comment">//使用struct Stu这个类型创建了一个学生对象s1，并初始化</span></span><br><span class="line">    struct <span class="type">Stu</span> <span class="variable">s1</span> <span class="operator">=</span> &#123;<span class="string">&quot;wmy&quot;</span>,<span class="number">18</span>,<span class="string">&quot;2336005149&quot;</span>&#125;;   </span><br><span class="line">    printf(<span class="string">&quot;%s\n&quot;</span>,s1.name);           <span class="comment">//或者  struct Stu* ps = &amp;s1</span></span><br><span class="line">    printf(<span class="string">&quot;%d\n&quot;</span>,s1.age);                   printf(<span class="string">&quot;%s\n&quot;</span>,ps-&gt;name);</span><br><span class="line">    printf(<span class="string">&quot;%s\n&quot;</span>,s1.id);</span><br><span class="line">    <span class="comment">//结构体变量.成员名</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>表达式求值</strong></p>
+<p>表达式求值的顺序一部分是由操作符的优先级和结合性决定</p>
+<p>有些表达式的操作数在求值的过程中可能需要转换为其他类型</p>
+<p><strong>隐式类型转换</strong></p>
+<p>C的算术运算总是至少以缺省整型类型的精度来进行的</p>
+<p>为了获得这个精度，表达式中字符和短整型操作数在使用之前被转换为普通整型，这种转换称为整型提升。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">char</span> <span class="variable">a</span> <span class="operator">=</span> <span class="number">3</span>;<span class="comment">//8个bit位</span></span><br><span class="line">    <span class="comment">//00000011-a</span></span><br><span class="line">    <span class="type">char</span> <span class="variable">b</span> <span class="operator">=</span> <span class="number">127</span>;</span><br><span class="line">    <span class="comment">//01111111-b</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">//00000000000000000000000000000011</span></span><br><span class="line">    <span class="comment">//00000000000000000000000001111111</span></span><br><span class="line">    <span class="comment">//00000000000000000000000010000010</span></span><br><span class="line">    <span class="type">char</span> <span class="variable">c</span> <span class="operator">=</span> a + b;</span><br><span class="line">    <span class="comment">//10000010-c   ,该符号位为1，补1</span></span><br><span class="line">    <span class="comment">//11111111111111111111111110000010-补码</span></span><br><span class="line">    <span class="comment">//11111111111111111111111110000001-反码</span></span><br><span class="line">    <span class="comment">//10000000000000000000000001111110-原码</span></span><br><span class="line">    printf(<span class="string">&quot;%d\n&quot;</span>,c);%d输出整型值</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>整型提升是按照变量的数据类型的符号位来提升的</p>
+<p>负数的整型提升：高位补充符号位1</p>
+<p>正数的整型提升：高位补充符号位0</p>
+<p><strong>算术转换</strong></p>
+<p>如果某个操作符的各个操作数属于不同的类型，那么除非其中一个操作数的转换为另一个操作数的类型，否则操作就无法进行</p>
+<p>long double</p>
+<p>double</p>
+<p>float</p>
+<p>unsigned long int</p>
+<p>long int</p>
+<p>unsigned int</p>
+<p>int</p>
+<p>如果某个操作数排名较低，那么首先要转换为另一个操作数的类型后执行运算</p>
+<p><strong>操作符的属性</strong></p>
+<p>1.操作符的优先级   2.操作符的结合性    3.是否控制求值顺序</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//无法计算</span></span><br><span class="line">a*b+c*d+e*f</span><br><span class="line">c + --c<span class="comment">//--在+运算前面，但不知道+操作符的获取在右操作数之前还是之后求值</span></span><br></pre></td></tr></table></figure>
+
+<p>如果表达式不能通过操作符的属性确定唯一的路径，那么这个表达式存在问题</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/10/29/%E6%93%8D%E4%BD%9C%E7%AC%A6/" data-id="clob8xnup0000lots1r06g09l" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
   
     <article id="post-代码例子" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
@@ -117,7 +247,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/10/29/%E4%BB%A3%E7%A0%81%E4%BE%8B%E5%AD%90/" data-id="clob8nnhd0000q0ts5a4w5qjy" data-title="" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      <a data-url="http://example.com/2023/10/29/%E4%BB%A3%E7%A0%81%E4%BE%8B%E5%AD%90/" data-id="clob8nnhd0000q0ts5a4w5qjy" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -272,7 +402,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/10/19/post/" data-id="clnysinfo00011sts6as8eyq2" data-title="post" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      <a data-url="http://example.com/2023/10/19/post/" data-id="clnysinfo00011sts6as8eyq2" data-title="post" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -323,7 +453,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/10/19/hello-world/" data-id="clnysinfl00001stsa91thn8v" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      <a data-url="http://example.com/2023/10/19/hello-world/" data-id="clnysinfl00001stsa91thn8v" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -351,7 +481,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archiv</h3>
+    <h3 class="widget-title">Archives</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/10/">October 2023</a></li></ul>
     </div>
@@ -361,9 +491,13 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">letzter Beitrag</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2023/10/29/%E6%93%8D%E4%BD%9C%E7%AC%A6/">(no title)</a>
+          </li>
         
           <li>
             <a href="/2023/10/29/%E4%BB%A3%E7%A0%81%E4%BE%8B%E5%AD%90/">(no title)</a>
