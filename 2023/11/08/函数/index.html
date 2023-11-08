@@ -4,21 +4,21 @@
   <meta charset="utf-8">
   
   
-  <title>post | Hexo</title>
+  <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="函数（构成程序的基本模块）一.库函数C语言中常用的库函数： 注：头文件类型不同 1.数学函数：pow（a,b）;a的b的幂次方；  sqrt(b);计算平方根；   fabs（）；计算绝对值 ​                       log（a）；计算lnx的值；   log10(x);计算lgx的值；exp(x);e的x的幂次方； ​                       sin(x">
 <meta property="og:type" content="article">
-<meta property="og:title" content="post">
-<meta property="og:url" content="http://example.com/2023/10/19/post/index.html">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/2023/11/08/%E5%87%BD%E6%95%B0/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="函数（构成程序的基本模块）一.库函数C语言中常用的库函数： 注：头文件类型不同 1.数学函数：pow（a,b）;a的b的幂次方；  sqrt(b);计算平方根；   fabs（）；计算绝对值 ​                       log（a）；计算lnx的值；   log10(x);计算lgx的值；exp(x);e的x的幂次方； ​                       sin(x">
 <meta property="og:locale">
-<meta property="og:image" content="http://example.com/typora/picture/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20231023122653.jpg">
-<meta property="og:image" content="http://example.com/typora/picture/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20231023010153.jpg">
-<meta property="article:published_time" content="2023-10-19T09:28:35.000Z">
-<meta property="article:modified_time" content="2023-10-23T13:30:51.084Z">
+<meta property="og:image" content="d:\typora\picture\%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20231023122653.jpg">
+<meta property="og:image" content="d:\typora\picture\%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20231023010153.jpg">
+<meta property="article:published_time" content="2023-11-08T15:29:26.675Z">
+<meta property="article:modified_time" content="2023-11-06T12:39:00.095Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/typora/picture/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20231023122653.jpg">
+<meta name="twitter:image" content="d:\typora\picture\%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20231023122653.jpg">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -77,25 +77,15 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-post" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-函数" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2023/10/19/post/" class="article-date">
-  <time class="dt-published" datetime="2023-10-19T09:28:35.000Z" itemprop="datePublished">2023-10-19</time>
+    <a href="/2023/11/08/%E5%87%BD%E6%95%B0/" class="article-date">
+  <time class="dt-published" datetime="2023-11-08T15:29:26.675Z" itemprop="datePublished">2023-11-08</time>
 </a>
     
   </div>
   <div class="article-inner">
     
-    
-      <header class="article-header">
-        
-  
-    <h1 class="p-name article-title" itemprop="headline name">
-      post
-    </h1>
-  
-
-      </header>
     
     <div class="e-content article-entry" itemprop="articleBody">
       
@@ -112,7 +102,7 @@
 <p><strong>例子</strong>：strcpy  - string copy - 字符串拷贝(注:字符串的结束标志\0也会被拷贝)</p>
 <p>​           strcpy(arr2,arr1) - 把arr1拷贝到arr2</p>
 <blockquote>
-<p>#include &lt;stdio.h&gt;<br>#include &lt;string.h&gt;<br>int main()<br>{<br> char arr1[] &#x3D; “bit”;<br> char arr2[20] &#x3D; “#########”;<br> strcpy(arr2,arr1);<br> printf(“%s\n”,arr2);<br> return 0;<br>}</p>
+<p>#include &lt;stdio.h&gt;<br>#include &lt;string.h&gt;<br>int main()<br>{<br>    char arr1[] &#x3D; “bit”;<br>    char arr2[20] &#x3D; “#########”;<br>    strcpy(arr2,arr1);<br>    printf(“%s\n”,arr2);<br>    return 0;<br>}</p>
 </blockquote>
 <p>​          strlen - string length - 字符串长度有关</p>
 <p><a target="_blank" rel="noopener" href="https://en.cppreference.com/">https://en.cppreference.com</a></p>
@@ -125,7 +115,7 @@
 <p>​               可执行语句序列</p>
 <p>​        }</p>
 <blockquote>
-<p>#include &lt;stdio.h&gt;<br>&#x2F;&#x2F;定义函数<br>int get_max(int x,int y)<br>{<br> if(x&gt;y)<br>     return x;<br> else<br>     return y;<br>}<br>int main()<br>{<br> int a &#x3D; 10;<br> int b &#x3D; 20;<br> int max &#x3D; get_max(a,b);&#x2F;&#x2F;函数的使用<br> printf(“max &#x3D; %d\n”,max);<br> return 0;<br>}</p>
+<p>#include &lt;stdio.h&gt;<br>&#x2F;&#x2F;定义函数<br>int get_max(int x,int y)<br>{<br>    if(x&gt;y)<br>        return x;<br>    else<br>        return y;<br>}<br>int main()<br>{<br>    int a &#x3D; 10;<br>    int b &#x3D; 20;<br>    int max &#x3D; get_max(a,b);&#x2F;&#x2F;函数的使用<br>    printf(“max &#x3D; %d\n”,max);<br>    return 0;<br>}</p>
 </blockquote>
 <h2 id="三-函数的参数"><a href="#三-函数的参数" class="headerlink" title="三. 函数的参数"></a>三. 函数的参数</h2><p>**实际参数(实参)**：</p>
 <blockquote>
@@ -158,7 +148,7 @@
 <p><strong>链式访问</strong></p>
 <blockquote>
 <p>把一个函数的返回值作为另外一个函数的参数</p>
-<p>#include &lt;stdio.h&gt;<br>#include &lt;string.h&gt;<br>int main()<br>{<br>int len &#x3D; 0;<br>&#x2F;&#x2F;1<br>&#x2F;&#x2F;len &#x3D; strlen(“abc”);<br>&#x2F;&#x2F;printf(“%d\n”,len);<br>&#x2F;&#x2F;2<br>printf(“%d\n”,strlen(“abc”)) ;<br>return 0;<br>}</p>
+<p>#include &lt;stdio.h&gt;<br>#include &lt;string.h&gt;<br>int main()<br>{<br>   int len &#x3D; 0;<br>   &#x2F;&#x2F;1<br>   &#x2F;&#x2F;len &#x3D; strlen(“abc”);<br>   &#x2F;&#x2F;printf(“%d\n”,len);<br>   &#x2F;&#x2F;2<br>   printf(“%d\n”,strlen(“abc”)) ;<br>   return 0;<br>}</p>
 </blockquote>
 <h2 id="六-函数的声明和定义"><a href="#六-函数的声明和定义" class="headerlink" title="六.函数的声明和定义"></a>六.函数的声明和定义</h2><p><strong>函数声明：</strong></p>
 <blockquote>
@@ -169,8 +159,8 @@
 <p><strong>函数的定义：</strong></p>
 <blockquote>
 <p>函数的定义是指函数的具体体现，交代函数的功能实现</p>
-<p>#include &lt;stdio.h&gt;<br>&#x2F;&#x2F;函数的声明<br>int Add(int x,int y);&#x2F;&#x2F;一般放在头文件中<br>&#x2F;&#x2F;函数的定义<br>int Add(int x,int y)<br>{<br> int z &#x3D; x+y;<br> return z;<br>}</p>
-<p>int main()<br>{<br> int a &#x3D; 10;<br> int b &#x3D; 20;<br> int sum &#x3D; Add(a,b);&#x2F;&#x2F;函数的调用<br> &#x2F;&#x2F;int sum &#x3D; 0;<br> &#x2F;&#x2F;sum &#x3D; Add(a,b);<br> printf(“%d\n”,sum);<br>return 0;<br>}</p>
+<p>#include &lt;stdio.h&gt;<br>&#x2F;&#x2F;函数的声明<br>int Add(int x,int y);&#x2F;&#x2F;一般放在头文件中<br>&#x2F;&#x2F;函数的定义<br>int Add(int x,int y)<br>{<br>    int z &#x3D; x+y;<br>    return z;<br>}</p>
+<p>int main()<br>{<br>    int a &#x3D; 10;<br>    int b &#x3D; 20;<br>    int sum &#x3D; Add(a,b);&#x2F;&#x2F;函数的调用<br>    &#x2F;&#x2F;int sum &#x3D; 0;<br>    &#x2F;&#x2F;sum &#x3D; Add(a,b);<br>    printf(“%d\n”,sum);<br>   return 0;<br>}</p>
 </blockquote>
 <h2 id="七-函数的递归"><a href="#七-函数的递归" class="headerlink" title="七.函数的递归"></a>七.函数的递归</h2><p><strong>什么是递归？</strong></p>
 <blockquote>
@@ -180,17 +170,17 @@
 <p>只需少量的程序就可以描述出解题过程所需要的多次重复计算，大大的减少了程序的</p>
 <p>代码量。<strong>递归的主要思考方式在于：把大事化小</strong> </p>
 <p>&#x2F;&#x2F;递归方法实现计算整数n的阶乘<br>#include &lt;stdio.h&gt;<br>long Fact(int n);</p>
-<p>int main()<br>{<br> int n;<br> long result;<br> printf(“Input n:”);<br> scanf(“%d”,&amp;n);<br> result &#x3D; Fact(n);&#x2F;&#x2F;调用递归函数Fact()计算n!<br> if(result &#x3D; -1)&#x2F;&#x2F;处理非法数据<br>     printf(“n&lt;0,data error!\n”);<br> else<br>     printf(“%d! &#x3D; %ld\n”,n,result);<br> return 0;<br>}</p>
-<p>long Fact(int n)<br>{<br> if(n&lt;0)<br>     return -1;&#x2F;&#x2F;处理非法数据<br> else if(n &#x3D;&#x3D; 0||n &#x3D;&#x3D; 1)&#x2F;&#x2F;基线情况，即递归终止条件<br>     return 1;<br> else<br>     return(n*Fact(n-1));&#x2F;&#x2F;递归调用，利用（n-1)!计算n！<br>}</p>
+<p>int main()<br>{<br>    int n;<br>    long result;<br>    printf(“Input n:”);<br>    scanf(“%d”,&amp;n);<br>    result &#x3D; Fact(n);&#x2F;&#x2F;调用递归函数Fact()计算n!<br>    if(result &#x3D; -1)&#x2F;&#x2F;处理非法数据<br>        printf(“n&lt;0,data error!\n”);<br>    else<br>        printf(“%d! &#x3D; %ld\n”,n,result);<br>    return 0;<br>}</p>
+<p>long Fact(int n)<br>{<br>    if(n&lt;0)<br>        return -1;&#x2F;&#x2F;处理非法数据<br>    else if(n &#x3D;&#x3D; 0||n &#x3D;&#x3D; 1)&#x2F;&#x2F;基线情况，即递归终止条件<br>        return 1;<br>    else<br>        return(n*Fact(n-1));&#x2F;&#x2F;递归调用，利用（n-1)!计算n！<br>}</p>
 </blockquote>
-<p><img src="/../../../typora/picture/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20231023122653.jpg"></p>
+<p><img src="D:\typora\picture\微信图片_20231023122653.jpg"></p>
 <p><strong>递归两个必要条件</strong></p>
 <ul>
 <li>存在限制条件，当满足这个限制条件的时候，递归便不再继续。</li>
 <li>每次递归调用后越来越接近这个限制条件。</li>
 </ul>
 <p>注：递归常见错误:栈溢出</p>
-<p><img src="/../../../typora/picture/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20231023010153.jpg"></p>
+<p><img src="D:\typora\picture\微信图片_20231023010153.jpg"></p>
 <h2 id="八-变量的作用域和生存期"><a href="#八-变量的作用域和生存期" class="headerlink" title="八.变量的作用域和生存期"></a>八.变量的作用域和生存期</h2><p><strong>1.变量的作用域：</strong></p>
 <blockquote>
 <p>程序中被花括号括起来的区域，叫做语句块。函数体是语句块，分支语句和循环体也是语句块。</p>
@@ -220,7 +210,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/10/19/post/" data-id="clnysinfo00011sts6as8eyq2" data-title="post" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2023/11/08/%E5%87%BD%E6%95%B0/" data-id="clopx1var000140ts7t7b961v" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -230,7 +220,7 @@
     
 <nav id="article-nav">
   
-    <a href="/2023/10/29/%E4%BB%A3%E7%A0%81%E4%BE%8B%E5%AD%90/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2023/11/08/%E6%95%B0%E7%BB%84%EF%BC%8C%E6%8C%87%E9%92%88/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
@@ -240,9 +230,9 @@
     </a>
   
   
-    <a href="/2023/10/19/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2023/11/04/%E6%9C%AC%E5%AD%A6%E6%9C%9F%E5%AD%A6%E4%B9%A0%E8%A7%84%E5%88%92/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Hello World</div>
+      <div class="article-nav-title"></div>
     </a>
   
 </nav>
