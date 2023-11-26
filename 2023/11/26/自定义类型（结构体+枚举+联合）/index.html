@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="自定义类型（结构体+枚举+联合）char  short   int   long  float  double-内置类型-C语言自己的数据类型 结构体结构体是一些值的集合，这些值称为成员变量，结构的每个成员可以是不同类型的变量。 12345678910111213141516&#x2F;&#x2F;描述一个学生的一些数据struct Stu&#x2F;&#x2F;Stu-结构体标签  struct结构体关键字  struct Stu-结">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/2023/11/26/%E8%87%AA%E5%AE%9A%E4%B9%89%E7%B1%BB%E5%9E%8B%EF%BC%88%E7%BB%93%E6%9E%84%E4%BD%93+%E6%9E%9A%E4%B8%BE+%E8%81%94%E5%90%88%EF%BC%89/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="自定义类型（结构体+枚举+联合）char  short   int   long  float  double-内置类型-C语言自己的数据类型 结构体结构体是一些值的集合，这些值称为成员变量，结构的每个成员可以是不同类型的变量。 12345678910111213141516&#x2F;&#x2F;描述一个学生的一些数据struct Stu&#x2F;&#x2F;Stu-结构体标签  struct结构体关键字  struct Stu-结">
+<meta property="og:locale">
+<meta property="article:published_time" content="2023-11-26T12:13:00.549Z">
+<meta property="article:modified_time" content="2023-11-13T06:05:10.116Z">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Suche"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Suche"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-自定义类型（结构体+枚举+联合）" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/11/26/%E8%87%AA%E5%AE%9A%E4%B9%89%E7%B1%BB%E5%9E%8B%EF%BC%88%E7%BB%93%E6%9E%84%E4%BD%93+%E6%9E%9A%E4%B8%BE+%E8%81%94%E5%90%88%EF%BC%89/" class="article-date">
+  <time class="dt-published" datetime="2023-11-26T12:13:00.549Z" itemprop="datePublished">2023-11-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="自定义类型（结构体-枚举-联合）"><a href="#自定义类型（结构体-枚举-联合）" class="headerlink" title="自定义类型（结构体+枚举+联合）"></a>自定义类型（结构体+枚举+联合）</h1><p>char  short   int   long  float  double-内置类型-C语言自己的数据类型</p>
+<h3 id="结构体"><a href="#结构体" class="headerlink" title="结构体"></a>结构体</h3><p>结构体是一些值的集合，这些值称为成员变量，结构的每个成员可以是不同类型的变量。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//描述一个学生的一些数据</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Stu</span>//<span class="title">Stu</span>-结构体标签  <span class="keyword">struct</span>结构体关键字  <span class="keyword">struct</span> <span class="title">Stu</span>-结构体类型，前面加<span class="title">typedef</span>重新命名大括号后<span class="title">Stu</span>为新名字</span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="comment">//成员变量</span></span><br><span class="line">    <span class="type">char</span> name[<span class="number">20</span>];</span><br><span class="line">    <span class="type">short</span> age;</span><br><span class="line">    <span class="type">char</span> tele[<span class="number">12</span>];</span><br><span class="line">    <span class="type">char</span> sex[<span class="number">5</span>];</span><br><span class="line">&#125;;s1,s2<span class="comment">//定义一个结构体类型，不占空间s1,s2为全局变量</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Stu</span> <span class="title">s3</span>;</span><span class="comment">//全局变量</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">Stu</span> <span class="title">s</span>;</span><span class="comment">//创建变量，局部变量</span></span><br><span class="line">    <span class="comment">//改为新名字后，Stu s2；</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>匿名结构体类型：没有Stu结构体类型</p>
+<h3 id="结构体的自引用"><a href="#结构体的自引用" class="headerlink" title="结构体的自引用"></a>结构体的自引用</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Node</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="type">int</span> data;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">Node</span>* <span class="title">next</span>;</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">Node</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="type">int</span> data;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">Node</span>* <span class="title">next</span>;</span></span><br><span class="line">&#125;Node;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">Node</span> <span class="title">n1</span>;</span></span><br><span class="line">    Node n2;<span class="comment">//两种写法均可</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="结构体变量的定义和初始化"><a href="#结构体变量的定义和初始化" class="headerlink" title="结构体变量的定义和初始化"></a>结构体变量的定义和初始化</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">S</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="type">char</span> c;</span><br><span class="line">    <span class="type">int</span> a;</span><br><span class="line">    <span class="type">double</span> d;</span><br><span class="line">    <span class="type">char</span> arr[<span class="number">20</span>];</span><br><span class="line">&#125;;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">S</span> <span class="title">s</span> =</span> &#123;<span class="string">&#x27;c&#x27;</span>,<span class="number">13</span>,<span class="number">3.14</span>,<span class="string">&quot;hello world&quot;</span>&#125;;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%c %d %lf %s\n&quot;</span>,s.c,s.a,s.d,s.arr);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">T</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="type">double</span> weight;</span><br><span class="line">    <span class="type">short</span> age;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">S</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="type">char</span> c;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">T</span> <span class="title">st</span>;</span><span class="comment">//结构体里面放结构体</span></span><br><span class="line">    <span class="type">int</span> a;</span><br><span class="line">    <span class="type">double</span> d;</span><br><span class="line">    <span class="type">char</span> arr[<span class="number">20</span>];</span><br><span class="line">&#125;;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">S</span> <span class="title">s</span> =</span> &#123;<span class="string">&#x27;c&#x27;</span>,&#123;<span class="number">55.6</span>,<span class="number">20</span>&#125;,<span class="number">13</span>,<span class="number">3.14</span>,<span class="string">&quot;hello world&quot;</span>&#125;;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%c %d %lf %s\n&quot;</span>,s.c,s.a,s.d,s.arr);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%lf\n&quot;</span>,s.st.weight);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="结构体内存对齐"><a href="#结构体内存对齐" class="headerlink" title="结构体内存对齐"></a>结构体内存对齐</h3><p>结构体的对齐规则：</p>
+<p>1.第一个成员在与结构体变量偏移量为0的地址处。</p>
+<p>2.其他成员变量要对齐到某个数字（对齐数）的整数倍的地址处。</p>
+<p>对齐数 &#x3D; 编译器默认的一个对齐数与该成员大小的较小值</p>
+<p>VS中默认的值为8,没有默认的对齐数，成员大小为对齐数</p>
+<p>3.结构体总大小为最大对齐数（每个成员变量都有一个对齐数）的整数倍，（包括默认值）</p>
+<p>4.如果嵌套了结构体的情况，嵌套的结构体对齐到自己的最大对齐数的整数倍处，结构体的整体大小就是所有最大对齐数（含嵌套结构体的对齐数）的整数倍。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">S1</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="type">char</span> c1;</span><br><span class="line">    <span class="type">int</span> a;</span><br><span class="line">    <span class="type">char</span> c2;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">S2</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="type">char</span> c1;</span><br><span class="line">    <span class="type">char</span> c2;</span><br><span class="line">    <span class="type">int</span> a;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">S1</span> <span class="title">s1</span> =</span> &#123;<span class="number">0</span>&#125;;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,<span class="keyword">sizeof</span>(s1));<span class="comment">//12</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">S2</span> <span class="title">s2</span> =</span> &#123;<span class="number">0</span>&#125;;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,<span class="keyword">sizeof</span>(s2));<span class="comment">//8</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//结构体嵌套问题</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">S3</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="type">double</span> d;</span><br><span class="line">    <span class="type">char</span> c;</span><br><span class="line">    <span class="type">int</span> i;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,<span class="keyword">sizeof</span>(s3));<span class="comment">//16</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">S4</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="type">char</span> c1;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">S3</span> <span class="title">s3</span>;</span></span><br><span class="line">    <span class="type">double</span> d;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,<span class="keyword">sizeof</span>(s4));<span class="comment">//32</span></span><br></pre></td></tr></table></figure>
+
+<p>结构体的内存对齐是拿空间来换取时间的做法</p>
+<p>既要满足对齐，又要节省空间：让占有空间小的成员尽量集中在一起</p>
+<p>char c1    char c2   int i </p>
+<h3 id="设置默认对齐数"><a href="#设置默认对齐数" class="headerlink" title="设置默认对齐数"></a>设置默认对齐数</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//#pragma是预处理指令，可以改变默认对齐数</span></span><br><span class="line"><span class="meta">#<span class="keyword">pragma</span> pack(4)</span></span><br><span class="line"><span class="comment">//设置默认对齐数位4</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">S</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="type">char</span> c1;</span><br><span class="line">    <span class="type">int</span> a;</span><br><span class="line">    <span class="type">char</span> c2;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="meta">#<span class="keyword">pragma</span> pack()</span></span><br><span class="line"><span class="comment">//取消设置的默认对齐数</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">S</span> <span class="title">s</span> =</span> &#123;<span class="number">0</span>&#125;;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,<span class="keyword">sizeof</span>(s));<span class="comment">//12</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//offsetof返回偏移量</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stddef.h&gt;</span></span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">S</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="type">char</span> c;</span><br><span class="line">    <span class="type">int</span> i;</span><br><span class="line">    <span class="type">double</span> d;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,offsetof(<span class="keyword">struct</span> S,c));<span class="comment">//成员变量相对于结构体的偏移量</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,offsetof(<span class="keyword">struct</span> S,i));</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,offsetof(<span class="keyword">struct</span> S,d));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="结构体传参"><a href="#结构体传参" class="headerlink" title="结构体传参"></a>结构体传参</h3><p>函数内部要改变函数外部，需要传地址</p>
+<p>首选print2函数，原因：</p>
+<p>函数传参的时候，参数是需要压栈，会有时间和空间上的系统开销</p>
+<p>如果传递一个结构体对象的时候，结构体过大，参数压栈的系统开销比较大，所以会导致性能的下降。</p>
+<p>结论：结构体传参的时候，要传结构体的地址</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">S</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="type">int</span> a;</span><br><span class="line">    <span class="type">char</span> c;</span><br><span class="line">    <span class="type">double</span> d;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="type">void</span> <span class="title function_">Init</span><span class="params">(<span class="keyword">struct</span> S* ps)</span></span><br><span class="line">&#123;</span><br><span class="line">    ps-&gt;a = <span class="number">100</span>;</span><br><span class="line">    ps-&gt;c = <span class="string">&#x27;w&#x27;</span>;</span><br><span class="line">    ps-&gt;d = <span class="number">3.14</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//传值</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">Print1</span><span class="params">(<span class="keyword">struct</span> S tmp)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d %c %lf\n&quot;</span>,tmp.a,tmp.c,tmp.d);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//传址</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">Print2</span><span class="params">(<span class="keyword">struct</span> S* ps)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d %c %lf\n&quot;</span>,ps-&gt;a,ps-&gt;c,ps-&gt;d);</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">S</span> <span class="title">s</span> =</span> &#123;<span class="number">0</span>&#125;;</span><br><span class="line">    Init(&amp;s);</span><br><span class="line">    Print1(s);<span class="comment">//Print2(&amp;s)功能更强大，可以改变值</span></span><br><span class="line">    Print2(&amp;s);<span class="comment">//功能更强大，可以改变值</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="位段"><a href="#位段" class="headerlink" title="位段"></a>位段</h1><p>位段的声明和结构是类似的，有两个不同：</p>
+<p>1.位段（二进制位）的成员必须是int ,unsigned int,signed int</p>
+<p>2.位段的成员后边有一个冒号和一个数字。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">S</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="type">int</span> a:<span class="number">2</span>;数字代表占几个bit位</span><br><span class="line">    <span class="type">int</span> b:<span class="number">5</span>;</span><br><span class="line">    <span class="type">int</span> c:<span class="number">10</span>;</span><br><span class="line">    <span class="type">int</span> d:<span class="number">30</span>;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">S</span> <span class="title">s</span>;</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,<span class="keyword">sizeof</span>(s));<span class="comment">//8</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="位段的内存分配"><a href="#位段的内存分配" class="headerlink" title="位段的内存分配"></a>位段的内存分配</h3><p>1.位段的成员可以是int ,unsigned int ,signed int或者是char（属于整形家族）类型</p>
+<p>2.位段的空间上是按照需要以4个字节（int）或者一个字节（char）的方式来开辟的</p>
+<p>3.位段涉及很多不确定因素，位段是不跨平台的，注重可移植的程序应该避免使用位段</p>
+<h3 id="位段的跨平台问题"><a href="#位段的跨平台问题" class="headerlink" title="位段的跨平台问题"></a>位段的跨平台问题</h3><p>1.int位段被当成有符号数还是无符号数是不确定的。</p>
+<p>2.位段中最大位的数目不能确定。（16位机器最大16,32位机器最大32，写成27，在16位机器会出问题</p>
+<p>3.位段中的成员在内存中从左往右分配，还是从右往左分配标准尚未定义。</p>
+<p>4.当一个结构包含两个位段，第二个位段成员比较大，无法容纳于第一个位段剩余的位时，是舍弃剩余的位还是利用，这是不确定的</p>
+<p><strong>总结</strong></p>
+<p>跟结构相比，位段可以达到同样的效果，但是可以很好的节省空间，但是有跨平台的问题存在</p>
+<h1 id="枚举"><a href="#枚举" class="headerlink" title="枚举"></a>枚举</h1><p>把可能的取值一一列举</p>
+<h3 id="枚举类型的定义"><a href="#枚举类型的定义" class="headerlink" title="枚举类型的定义"></a>枚举类型的定义</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">enum</span> <span class="title">Sex</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="comment">//枚举可能的类型-常量</span></span><br><span class="line">    MALE,<span class="comment">//MALE = 2,可以给值打印，如果下面两个不给值会打印出2,3,4</span></span><br><span class="line">    FEMALE,</span><br><span class="line">    SECRET</span><br><span class="line">&#125;;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="class"><span class="keyword">enum</span> <span class="title">Sex</span> <span class="title">s</span> =</span> MALE;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,<span class="keyword">sizeof</span>(s));<span class="comment">//4 enum一个整形值</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">enum</span> <span class="title">Color</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    RED,<span class="comment">//0</span></span><br><span class="line">    GREEN,<span class="comment">//1</span></span><br><span class="line">    BULE<span class="comment">//2</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d %d %d\n&quot;</span>,RED,GREEN,BULE);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="枚举的优点"><a href="#枚举的优点" class="headerlink" title="枚举的优点"></a>枚举的优点</h3><p>1.增加代码的可读性和可维护性</p>
+<p>2.和#define定义的标识符比较枚举有类型检查，更加严谨</p>
+<p>3.防止了命名污染（封装）</p>
+<p>4.便于调试</p>
+<p>5.使用方便，一次可以定义多个常量</p>
+<h1 id="联合（共用体）"><a href="#联合（共用体）" class="headerlink" title="联合（共用体）"></a>联合（共用体）</h1><h3 id="联合类型的定义"><a href="#联合类型的定义" class="headerlink" title="联合类型的定义"></a>联合类型的定义</h3><p>联合也是一种特殊的自定义类型 这种类型定义的变量也包含一系列的成员，特征是这些成员共用同一块空间（所以联合也叫共用体）。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">union</span> <span class="title">Un</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="type">char</span> c;</span><br><span class="line">    <span class="type">int</span> i;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="class"><span class="keyword">union</span> <span class="title">Un</span> <span class="title">u</span>;</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,<span class="keyword">sizeof</span>(u));<span class="comment">//4</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%p\n&quot;</span>,&amp;u);<span class="comment">//三个地址一样</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%p\n&quot;</span>,&amp;(u.c));<span class="comment">//c和i不能同时用</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%p\n&quot;</span>,&amp;(u.i));</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="联合的特点"><a href="#联合的特点" class="headerlink" title="联合的特点"></a>联合的特点</h3><p>联合的成员是共用同一块内存空间的，这样一个联合变量的大小，至少是最大成员的大小（因为联合至少得有能力保存最大的那个成员）</p>
+<h3 id="联合大小的计算"><a href="#联合大小的计算" class="headerlink" title="联合大小的计算"></a>联合大小的计算</h3><ul>
+<li>联合的大小至少是最大成员的大小</li>
+<li>当最大成员大小不是最大对齐数的整数倍的时候，就要对齐到最大对齐数的整数倍</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">union</span> <span class="title">Un</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="type">int</span> a;</span><br><span class="line">    <span class="type">char</span> arr[<span class="number">5</span>];</span><br><span class="line">&#125;;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="class"><span class="keyword">union</span> <span class="title">Un</span> <span class="title">u</span>;</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,<span class="keyword">sizeof</span>(u));<span class="comment">//8</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/11/26/%E8%87%AA%E5%AE%9A%E4%B9%89%E7%B1%BB%E5%9E%8B%EF%BC%88%E7%BB%93%E6%9E%84%E4%BD%93+%E6%9E%9A%E4%B8%BE+%E8%81%94%E5%90%88%EF%BC%89/" data-id="clpffyt0v0004tsts2t0ma725" data-title="" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/11/26/%E5%AD%97%E7%AC%A6%E5%87%BD%E6%95%B0%E5%92%8C%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%87%BD%E6%95%B0/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Neuer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/11/26/%E5%8A%A8%E6%80%81%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Älter</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archiv</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/11/">November 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/10/">October 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">letzter Beitrag</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/11/26/%E5%AD%97%E7%AC%A6%E5%87%BD%E6%95%B0%E5%92%8C%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%87%BD%E6%95%B0/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/26/%E8%87%AA%E5%AE%9A%E4%B9%89%E7%B1%BB%E5%9E%8B%EF%BC%88%E7%BB%93%E6%9E%84%E4%BD%93+%E6%9E%9A%E4%B8%BE+%E8%81%94%E5%90%88%EF%BC%89/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/26/%E5%8A%A8%E6%80%81%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/26/C%E8%AF%AD%E8%A8%80%E9%A2%84%E5%A4%84%E7%90%86/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/26/C%E8%AF%AD%E8%A8%80%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 Hexo<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

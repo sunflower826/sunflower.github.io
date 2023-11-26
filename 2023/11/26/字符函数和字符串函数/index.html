@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="字符函数和字符串函数strlen求字符串长度：strlen(必须要有\0) size_t  &#x3D;&#x3D;  unsighted int 12strlen(&quot;abc&quot;)-strlen(&quot;abcdef&quot;)&gt;0 &#x2F;&#x2F;strlen  返回类型为无符号数  长度不受限制的字符串函数：strcpy         strcat          str">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/2023/11/26/%E5%AD%97%E7%AC%A6%E5%87%BD%E6%95%B0%E5%92%8C%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%87%BD%E6%95%B0/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="字符函数和字符串函数strlen求字符串长度：strlen(必须要有\0) size_t  &#x3D;&#x3D;  unsighted int 12strlen(&quot;abc&quot;)-strlen(&quot;abcdef&quot;)&gt;0 &#x2F;&#x2F;strlen  返回类型为无符号数  长度不受限制的字符串函数：strcpy         strcat          str">
+<meta property="og:locale">
+<meta property="og:image" content="d:\typora\picture\strlen.jpg">
+<meta property="og:image" content="d:\typora\picture\strcpy.jpg">
+<meta property="og:image" content="d:\typora\picture\strcat.jpg">
+<meta property="og:image" content="d:\typora\picture\strcmp.jpg">
+<meta property="og:image" content="d:\typora\picture\strncpy.jpg">
+<meta property="og:image" content="d:\typora\picture\strncat.jpg">
+<meta property="og:image" content="d:\typora\picture\strncmp.jpg">
+<meta property="og:image" content="d:\typora\picture\strstr.jpg">
+<meta property="og:image" content="d:\typora\picture\hans.jpg">
+<meta property="og:image" content="d:\typora\picture\memcpy.jpg">
+<meta property="og:image" content="d:\typora\picture\memmove.jpg">
+<meta property="og:image" content="d:\typora\picture\memcmp.jpg">
+<meta property="article:published_time" content="2023-11-26T12:13:00.551Z">
+<meta property="article:modified_time" content="2023-11-11T13:57:11.699Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="d:\typora\picture\strlen.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Suche"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Suche"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-字符函数和字符串函数" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/11/26/%E5%AD%97%E7%AC%A6%E5%87%BD%E6%95%B0%E5%92%8C%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%87%BD%E6%95%B0/" class="article-date">
+  <time class="dt-published" datetime="2023-11-26T12:13:00.551Z" itemprop="datePublished">2023-11-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="字符函数和字符串函数"><a href="#字符函数和字符串函数" class="headerlink" title="字符函数和字符串函数"></a>字符函数和字符串函数</h1><h3 id="strlen"><a href="#strlen" class="headerlink" title="strlen"></a>strlen</h3><p>求字符串长度：strlen(必须要有\0)</p>
+<p>size_t  &#x3D;&#x3D;  unsighted int</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">strlen</span>(<span class="string">&quot;abc&quot;</span>)-<span class="built_in">strlen</span>(<span class="string">&quot;abcdef&quot;</span>)&gt;<span class="number">0</span></span><br><span class="line"> <span class="comment">//strlen  返回类型为无符号数</span></span><br></pre></td></tr></table></figure>
+
+<p>长度不受限制的字符串函数：strcpy         strcat          strcmp</p>
+<p><img src="D:\typora\picture\strlen.jpg"></p>
+<h3 id="strcpy"><a href="#strcpy" class="headerlink" title="strcpy"></a>strcpy</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//strcpy拷贝</span></span><br><span class="line"><span class="comment">//源字符串必须以\0结束，会将源字符串的\0拷贝到目标空间</span></span><br><span class="line"><span class="comment">//目标空间必须足够大，以确保能存放源字符串，目标空间可变</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">char</span> arr1 = <span class="string">&quot;abcdefghi&quot;</span>;</span><br><span class="line">    char2 arr2 = <span class="string">&quot;bit&quot;</span>;</span><br><span class="line">    <span class="built_in">strcpy</span>(arr1,arr2);<span class="comment">//\0也会被拷贝</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">char</span>*<span class="title function_">my_strcpy</span><span class="params">(<span class="type">char</span>* dest,<span class="type">const</span> <span class="type">char</span>*src)</span></span><br><span class="line">&#123;</span><br><span class="line">    assert(dest != <span class="literal">NULL</span>);</span><br><span class="line">    dssert(src != <span class="literal">NULL</span>);</span><br><span class="line">    <span class="type">char</span>*ret = dest;</span><br><span class="line">    <span class="comment">//拷贝src指向的字符串到dest指向的空间</span></span><br><span class="line">                                   ，包含\<span class="number">0</span></span><br><span class="line">    <span class="keyword">while</span>(*dest++ = *src++)</span><br><span class="line">    &#123;</span><br><span class="line">        ;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//返回目的空间的起始地址</span></span><br><span class="line">    <span class="keyword">return</span> ret;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">char</span> arr1 = <span class="string">&quot;abcdefghi&quot;</span>;</span><br><span class="line">    char2 arr2 = <span class="string">&quot;bit&quot;</span>;</span><br><span class="line">    my_strcpy(arr1,arr2);<span class="comment">//\0也会被拷贝</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><img src="D:\typora\picture\strcpy.jpg"></p>
+<h3 id="strcat"><a href="#strcat" class="headerlink" title="strcat"></a>strcat</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//strcat追加</span></span><br><span class="line"><span class="comment">//源字符串必须以\0结束,目标空间必须足够大，能容纳下源字符串的内容，目标空间可修改</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">char</span> arr1[<span class="number">30</span>]<span class="comment">//使目标空间足够大 = &quot;hello&quot;;//目的字符串</span></span><br><span class="line">    <span class="type">char</span> arr2[] = <span class="string">&quot;world&quot;</span>;<span class="comment">//源字符串</span></span><br><span class="line">    <span class="built_in">strcat</span>(arr1,arr2);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%s\n&quot;</span>,arr1);<span class="comment">//helloworld</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">char</span>*<span class="title function_">my_strcat</span><span class="params">(<span class="type">char</span>* dest,<span class="type">const</span> <span class="type">char</span>*src)</span></span><br><span class="line">&#123;</span><br><span class="line">    assert(dest != <span class="literal">NULL</span>);<span class="comment">//头文件assert.h</span></span><br><span class="line">    assert(src != <span class="literal">NULL</span>);</span><br><span class="line">    <span class="type">char</span>*ret = dest;</span><br><span class="line">    <span class="comment">//找到目的字符串的\0</span></span><br><span class="line">    <span class="keyword">while</span>(*dest != <span class="string">&#x27;\0&#x27;</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        dest++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//追加</span></span><br><span class="line">    <span class="keyword">while</span>(*dest++ = *src++)</span><br><span class="line">    &#123;</span><br><span class="line">        ;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ret;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">char</span> arr1[<span class="number">30</span>] = <span class="string">&quot;hello&quot;</span>;</span><br><span class="line">    <span class="type">char</span> arr2[] = <span class="string">&quot;world&quot;</span>;</span><br><span class="line">    my_strcat(arr1,arr2);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%s\n&quot;</span>,arr1);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="D:\typora\picture\strcat.jpg"></p>
+<h3 id="strcmp"><a href="#strcmp" class="headerlink" title="strcmp"></a>strcmp</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//strcmp比较对应字符的ASCLL值，如果两个对应的值相等，比较另一个</span></span><br><span class="line"><span class="comment">//第一个字符串大于第二个字符串，则返回大于0的数字</span></span><br><span class="line"><span class="comment">//第一个字符串等于第二个字符串，则返回0</span></span><br><span class="line"><span class="comment">//第一个字符串小于第二个字符串，则返回小于0的数字</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">char</span>*p1 = <span class="string">&quot;abcdef&quot;</span>;</span><br><span class="line">    <span class="type">char</span>* p2 = <span class="string">&quot;sqwer&quot;</span>;</span><br><span class="line">    <span class="type">int</span> ret = <span class="built_in">strcmp</span>(p1,p2);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,ret);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">my_strcmp</span><span class="params">(<span class="type">const</span> <span class="type">char</span>* str1,<span class="type">const</span> <span class="type">char</span>* str2)</span></span><br><span class="line">&#123;</span><br><span class="line">    assert(str1 &amp;&amp; str2);</span><br><span class="line">    <span class="keyword">while</span>(*str1 == *str2)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(*str == <span class="string">&#x27;\0&#x27;</span>)<span class="comment">//两个字符串都相等</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        str1++;</span><br><span class="line">        str2++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(*str1 &gt;*str2)<span class="comment">//return(*str1-*str2)</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">char</span>* p1 = <span class="string">&quot;abcdef&quot;</span>;</span><br><span class="line">    <span class="type">char</span>* p2 = <span class="string">&quot;sqwer&quot;</span>;</span><br><span class="line">    <span class="type">int</span> ret = my_strcmp(p1,p2);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,ret);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="D:\typora\picture\strcmp.jpg"></p>
+<p>长度受限制的字符串函数：strncpy        strncat       strncmp</p>
+<h3 id="strncpy"><a href="#strncpy" class="headerlink" title="strncpy"></a>strncpy</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">![<span class="built_in">strncpy</span>](D:\typora\picture\<span class="built_in">strncpy</span>.jpg)<span class="type">char</span>*<span class="title function_">strncpy</span><span class="params">(<span class="type">char</span>*strDest,<span class="type">const</span> <span class="type">char</span>*strSource,<span class="type">size_t</span> count)</span>;<span class="comment">//count单位字节，拷贝的个数</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">char</span> arr1[<span class="number">10</span>] = <span class="string">&quot;abcdef&quot;</span>;</span><br><span class="line">    <span class="type">char</span> arr2[] = <span class="string">&quot;hello bit&quot;</span>;</span><br><span class="line">    <span class="built_in">strncpy</span>(arr1,arr2,<span class="number">4</span>);<span class="comment">//只拷贝四个</span></span><br><span class="line">    <span class="type">char</span> arr3[<span class="number">10</span>] = <span class="string">&quot;abcdef&quot;</span>;</span><br><span class="line">    <span class="type">char</span> arr4[] = <span class="string">&quot;bit&quot;</span>;</span><br><span class="line">    <span class="built_in">strncpy</span>(arr3,arr4,<span class="number">6</span>);<span class="comment">//拷贝不够用0补</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//拷贝num个字符从源字符串到目标空间。</span></span><br><span class="line"><span class="comment">//如果源字符串的长度小于num，则拷贝完源字符串后，在目标的后边追加0，直到num个</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="D:\typora\picture\strncpy.jpg"></p>
+<h3 id="strncat"><a href="#strncat" class="headerlink" title="strncat"></a>strncat</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">char</span>*<span class="title function_">strncat</span> <span class="params">(<span class="type">char</span>*strDest,<span class="type">const</span> <span class="type">char</span>*strSource,<span class="type">size_t</span> count)</span>;<span class="comment">//使用说明</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">char</span> arr1[<span class="number">30</span>] = <span class="string">&quot;hello&quot;</span>;</span><br><span class="line">    <span class="type">char</span> arr2[] = <span class="string">&quot;world&quot;</span>;</span><br><span class="line">    <span class="built_in">strncat</span>(arr1,arr2,<span class="number">8</span>);<span class="comment">//8个不够也就只把world追加过去 </span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%s\n&quot;</span>,arr1);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="D:\typora\picture\strncat.jpg"></p>
+<h3 id="strncmp"><a href="#strncmp" class="headerlink" title="strncmp"></a>strncmp</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">strncmp</span><span class="params">(<span class="type">const</span> <span class="type">char</span> *string1,<span class="type">const</span> <span class="type">char</span> *string2,<span class="type">size_t</span> count)</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">strncmp</span> <span class="params">(p1,p2,<span class="number">4</span>)</span>;<span class="comment">//4比较字符的个数</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="D:\typora\picture\strncmp.jpg"></p>
+<p>字符串查找：strstr      strtok</p>
+<h3 id="strstr"><a href="#strstr" class="headerlink" title="strstr"></a>strstr</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//NULL-空指针</span></span><br><span class="line"><span class="comment">//NUL/Null-&#x27;\0&#x27;</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">char</span>*p1 = <span class="string">&quot;abcdef&quot;</span>;<span class="comment">//&quot;abcdefgh&quot;</span></span><br><span class="line">    <span class="type">char</span>*p2 = <span class="string">&quot;def&quot;</span>;</span><br><span class="line">    <span class="type">char</span>*ret = <span class="built_in">strstr</span>(p1,p2);</span><br><span class="line">    <span class="keyword">if</span>(ret == <span class="literal">NULL</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;字符串找不到\n&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%s\n,ret&quot;</span>);<span class="comment">//打印出defgh</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">char</span>*<span class="title function_">my_strstr</span><span class="params">(<span class="type">const</span> <span class="type">char</span>*p1,<span class="type">const</span> <span class="type">char</span>*p2)</span><span class="comment">//p1,p2被保护</span></span><br><span class="line">&#123;</span><br><span class="line">    assert(p1 != <span class="literal">NULL</span>);</span><br><span class="line">    assert(p2 != <span class="literal">NULL</span>);</span><br><span class="line">    <span class="type">char</span>*s1 = p1;</span><br><span class="line">    <span class="type">char</span>*s2 = p2;</span><br><span class="line">    <span class="type">char</span>*cur = (<span class="type">char</span>*)p1;</span><br><span class="line">    <span class="keyword">if</span>(*p2 == <span class="string">&#x27;\0&#x27;</span>)<span class="comment">//p2为空指针</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> (<span class="type">char</span>*)p1;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span>(*cur)<span class="comment">//cur是否为空指针\0</span></span><br><span class="line">    &#123;</span><br><span class="line">        s1 = cur;</span><br><span class="line">        s2 = p2;</span><br><span class="line">        <span class="keyword">while</span>((*s1 != <span class="string">&#x27;\0&#x27;</span>)&amp;&amp;(*s2 != <span class="string">&#x27;\0&#x27;</span>)&amp;&amp;(*s1 == *s2))</span><br><span class="line">        &#123;</span><br><span class="line">            s1++;</span><br><span class="line">            s2++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(*s2 == <span class="string">&#x27;\0&#x27;</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> cur;<span class="comment">//找到字串</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(*s1 == <span class="string">&#x27;\0&#x27;</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">NULL</span>;<span class="comment">//p1的长度小于p2</span></span><br><span class="line">        &#125;</span><br><span class="line">        cur++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">NULL</span>;<span class="comment">//找不到字串</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">char</span>*p1 = <span class="string">&quot;abcdef&quot;</span>;<span class="comment">//&quot;abcdefgh&quot;</span></span><br><span class="line">    <span class="type">char</span>*p2 = <span class="string">&quot;def&quot;</span>;</span><br><span class="line">    <span class="type">char</span>*ret = my_strstr(p1,p2);</span><br><span class="line">    <span class="keyword">if</span>(ret == <span class="literal">NULL</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;字符串找不到\n&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%s\n,ret&quot;</span>);<span class="comment">//打印出defgh</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="D:\typora\picture\strstr.jpg"></p>
+<h3 id="strtok"><a href="#strtok" class="headerlink" title="strtok"></a>strtok</h3><ul>
+<li><p>第一个参数指定一个字符串，它包含了0个或者多个由sep字符串中的一个或者多个分隔符分割的标记</p>
+</li>
+<li><p>strtok函数找到str中的下一个标记(例如，分隔符），并将其用\0结尾，返回一个指向这个标记的指针。（注：strtok函数</p>
+<p>会改变被操作的字符串，所以在使用strtok函数切分的字符串一般都是临时拷贝的内容并且可修改）</p>
+</li>
+<li><p>strtok函数的第一个参数不为NULL，函数将找到str中第一个标记，strtok函数将保存它在字符串的位置</p>
+</li>
+<li><p>strtok函数的第一个参数为NULL，函数将在同一个字符串中被保存的位置开始，查找下一个标记</p>
+</li>
+<li><p>如果字符串中不存在更多标记，则返回NULL指针</p>
+</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//strtok</span></span><br><span class="line"><span class="type">char</span>*<span class="title function_">strtok</span><span class="params">(<span class="type">char</span>*str,<span class="type">const</span> <span class="type">char</span>*sep)</span><span class="comment">//用法说明</span></span><br><span class="line">sep参数是个字符串，定义了用作分隔符的字符集合</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">char</span> arr[] = <span class="string">&quot;zpw@bitedu.tech&quot;</span>;</span><br><span class="line">    <span class="type">char</span>*p = <span class="string">&quot;@.&quot;</span>;</span><br><span class="line">    <span class="type">char</span> buf[<span class="number">1024</span>] = &#123;<span class="number">0</span>&#125;;</span><br><span class="line">    <span class="built_in">strcpy</span>(buf,arr);<span class="comment">//切割buf中的字符串</span></span><br><span class="line">    <span class="type">char</span>*ret = <span class="literal">NULL</span>;</span><br><span class="line">    <span class="keyword">for</span>(ret = strtok(arr,p);ret != <span class="literal">NULL</span>;ret = strtok(<span class="literal">NULL</span>,p))<span class="comment">//继续打印标记后面的</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%s\n&quot;</span>,ret);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="strerror"><a href="#strerror" class="headerlink" title="strerror"></a>strerror</h3><p>错误信息报告：strerror</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">char</span>*<span class="title function_">strerror</span><span class="params">(<span class="type">int</span> errnum)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//错误码           错误信息</span></span><br><span class="line">    <span class="comment">//0-              No error</span></span><br><span class="line">    <span class="comment">//1-              Operation not permitted</span></span><br><span class="line">    <span class="comment">//2-              No such file or directory</span></span><br><span class="line">    <span class="comment">//...</span></span><br><span class="line">    <span class="type">char</span>*str = strerror(error);<span class="comment">//头文件&lt;errno.h&gt;</span></span><br><span class="line">    <span class="comment">//erron 是一个全局的错误码变量，当c语言库函数在执行过程中，发生了错误，就会把对应错误码，赋值到errno中</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%s\n&quot;</span>,str);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//打开文件</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;errno.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    FILE*pf = fopen(<span class="string">&quot;text.txt&quot;</span>);<span class="comment">//text文件名</span></span><br><span class="line">    <span class="keyword">if</span>(pf == <span class="literal">NULL</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%s\n&quot;</span>,strerror(errno));<span class="comment">//报错误信息</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;open file success\n&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="字符操作"><a href="#字符操作" class="headerlink" title="字符操作"></a>字符操作</h3><p>1.字符分类函数</p>
+<p><img src="D:\typora\picture\hans.jpg"></p>
+<p>2.字符转换函数</p>
+<p>int tolower (int c) 转小写字母</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">char</span> arr[] = <span class="string">&quot;I Am a Student&quot;</span>;</span><br><span class="line">    <span class="type">int</span> i = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(arr[i])</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(<span class="built_in">isupper</span>(arr[i]))</span><br><span class="line">        &#123;</span><br><span class="line">            arr[i] = <span class="built_in">tolower</span>(arr[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        i++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%s\n&quot;</span>,arr);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>int toupper(int c)  转大写字母</p>
+<p><strong>以上操作对象都是字符串，\0</strong></p>
+<h1 id="内存操作函数"><a href="#内存操作函数" class="headerlink" title="内存操作函数"></a>内存操作函数</h1><p>memcpy    memmove    memset     memcmp</p>
+<p>整形数组   浮点型数组   结构体数组  字符串</p>
+<h3 id="memcpy"><a href="#memcpy" class="headerlink" title="memcpy"></a>memcpy</h3><p>只要处理不重叠内存的拷贝就可以</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//memcpy拷贝</span></span><br><span class="line"><span class="type">void</span>*<span class="title function_">memcpy</span><span class="params">(<span class="type">void</span>*destination,<span class="type">const</span> <span class="type">void</span>*source,<span class="type">size_t</span> num)</span>;<span class="comment">//num单位字节</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> arr1[] = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125;;</span><br><span class="line">    <span class="type">int</span> arr2[<span class="number">5</span>] = &#123;<span class="number">0</span>&#125;;</span><br><span class="line">    <span class="built_in">memcpy</span>(arr2,arr1,<span class="keyword">sizeof</span>(arr1));<span class="comment">//整形一个元素四个字节</span></span><br><span class="line">    <span class="built_in">printf</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">S</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="type">char</span> name;</span><br><span class="line">    <span class="type">char</span> age;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="type">void</span>* <span class="title function_">my_memcpy</span><span class="params">(<span class="type">void</span>*dest,<span class="type">const</span> <span class="type">void</span>*src,<span class="type">size_t</span> num)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">void</span>*ret = dest;</span><br><span class="line">    assert(dest != <span class="literal">NULL</span>);</span><br><span class="line">    assert(src != <span class="literal">NULL</span>);</span><br><span class="line">    <span class="keyword">while</span>(num--)</span><br><span class="line">    &#123;</span><br><span class="line">        *(<span class="type">char</span>*)dest = *(<span class="type">char</span>*)src;</span><br><span class="line">        ++(<span class="type">char</span>*)dest;</span><br><span class="line">        ++(<span class="type">char</span>*)src;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ret;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">S</span> <span class="title">arr3</span>[] =</span> &#123;&#123;<span class="string">&quot;zhangsan&quot;</span>,<span class="number">20</span>&#125;,&#123;<span class="string">&quot;lisi&quot;</span>,<span class="number">30</span>&#125;&#125;;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">S</span> <span class="title">arr4</span>[3] =</span> &#123;<span class="number">0</span>&#125;;</span><br><span class="line">    my_memcpy(arr4,arr3,<span class="keyword">sizeof</span>(arr3));</span><br><span class="line">    <span class="built_in">printf</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="D:\typora\picture\memcpy.jpg"></p>
+<h3 id="memmove"><a href="#memmove" class="headerlink" title="memmove"></a>memmove</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//memmove处理内存重叠的拷贝</span></span><br><span class="line"><span class="type">void</span>*<span class="title function_">memmove</span><span class="params">(<span class="type">void</span>*dest,<span class="type">const</span> <span class="type">void</span>*src,<span class="type">size_t</span> count)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> arr[] = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">10</span>&#125;;</span><br><span class="line">    <span class="type">int</span> i = <span class="number">0</span>;</span><br><span class="line">    memmove(arr+<span class="number">2</span>,arr,<span class="number">20</span>);</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;<span class="number">10</span>;i++);</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>,arr[i]);<span class="number">1</span> <span class="number">2</span> <span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span> <span class="number">5</span> <span class="number">8</span> <span class="number">9</span> <span class="number">10</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="D:\typora\picture\memmove.jpg"></p>
+<h3 id="memcmp"><a href="#memcmp" class="headerlink" title="memcmp"></a>memcmp</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//01 00 00 00 02 00 00 00 03 00 00 00...</span></span><br><span class="line">    <span class="comment">//01 00 00 00 02 00 00 00 05 00 00 00...</span></span><br><span class="line">    <span class="type">int</span> arr1[] = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125;;</span><br><span class="line">    <span class="type">int</span> arr2[] = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">5</span>,<span class="number">4</span>,<span class="number">3</span>&#125;;</span><br><span class="line">    <span class="type">int</span> ret = <span class="built_in">memcmp</span>(arr1,arr2,<span class="number">9</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,ret);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="D:\typora\picture\memcmp.jpg"></p>
+<h3 id="memset-内存设置"><a href="#memset-内存设置" class="headerlink" title="memset-内存设置"></a>memset-内存设置</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span>*<span class="title function_">memset</span><span class="params">(<span class="type">void</span>*dest,<span class="type">int</span> c,<span class="type">size_t</span> count)</span>;<span class="comment">//count 字节个数</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">char</span> arr[<span class="number">10</span>] = <span class="string">&quot;&quot;</span>;</span><br><span class="line">    <span class="built_in">memset</span>(arr,<span class="string">&#x27;#&#x27;</span>,<span class="number">10</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;+</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/11/26/%E5%AD%97%E7%AC%A6%E5%87%BD%E6%95%B0%E5%92%8C%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%87%BD%E6%95%B0/" data-id="clpffyt0t0003tstsgmns0vda" data-title="" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2023/11/26/%E8%87%AA%E5%AE%9A%E4%B9%89%E7%B1%BB%E5%9E%8B%EF%BC%88%E7%BB%93%E6%9E%84%E4%BD%93+%E6%9E%9A%E4%B8%BE+%E8%81%94%E5%90%88%EF%BC%89/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Älter</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archiv</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/11/">November 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/10/">October 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">letzter Beitrag</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/11/26/%E5%AD%97%E7%AC%A6%E5%87%BD%E6%95%B0%E5%92%8C%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%87%BD%E6%95%B0/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/26/%E8%87%AA%E5%AE%9A%E4%B9%89%E7%B1%BB%E5%9E%8B%EF%BC%88%E7%BB%93%E6%9E%84%E4%BD%93+%E6%9E%9A%E4%B8%BE+%E8%81%94%E5%90%88%EF%BC%89/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/26/%E5%8A%A8%E6%80%81%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/26/C%E8%AF%AD%E8%A8%80%E9%A2%84%E5%A4%84%E7%90%86/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/26/C%E8%AF%AD%E8%A8%80%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 Hexo<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
