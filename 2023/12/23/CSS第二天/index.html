@@ -1,0 +1,370 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Lucy | Lucy</title><meta name="author" content="sunflower"><meta name="copyright" content="sunflower"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="css第二天一、emmet语法1、简介​		Emmet语法的前身是Zen coding,它使用缩写,来提高html&#x2F;css的编写速度, Vscode内部已经集成该语法。 ​		快速生成HTML结构语法 ​		快速生成CSS样式语法 2、快速生成HTML结构语法 生成标签 直接输入标签名 按tab键即可   比如  div   然后tab 键， 就可以生成  如果想要生成多个相同标签  加">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Lucy">
+<meta property="og:url" content="http://example.com/2023/12/23/CSS%E7%AC%AC%E4%BA%8C%E5%A4%A9/index.html">
+<meta property="og:site_name" content="Lucy">
+<meta property="og:description" content="css第二天一、emmet语法1、简介​		Emmet语法的前身是Zen coding,它使用缩写,来提高html&#x2F;css的编写速度, Vscode内部已经集成该语法。 ​		快速生成HTML结构语法 ​		快速生成CSS样式语法 2、快速生成HTML结构语法 生成标签 直接输入标签名 按tab键即可   比如  div   然后tab 键， 就可以生成  如果想要生成多个相同标签  加">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img/favicom.png">
+<meta property="article:published_time" content="2023-12-23T09:23:01.459Z">
+<meta property="article:modified_time" content="2023-11-28T14:00:19.161Z">
+<meta property="article:author" content="sunflower">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/favicom.png"><link rel="shortcut icon" href="/img/favicom.png"><link rel="canonical" href="http://example.com/2023/12/23/CSS%E7%AC%AC%E4%BA%8C%E5%A4%A9/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Lucy',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-11-28 22:00:19'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/favicom.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">24</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr class="custom-hr"/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/avatar.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="Lucy"><span class="site-name">Lucy</span></a></span><div id="menus"><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">无题</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-12-23T09:23:01.459Z" title="发表于 2023-12-23 17:23:01">2023-12-23</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-11-28T14:00:19.161Z" title="更新于 2023-11-28 22:00:19">2023-11-28</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="css第二天"><a href="#css第二天" class="headerlink" title="css第二天"></a>css第二天</h1><h2 id="一、emmet语法"><a href="#一、emmet语法" class="headerlink" title="一、emmet语法"></a>一、emmet语法</h2><h3 id="1、简介"><a href="#1、简介" class="headerlink" title="1、简介"></a>1、简介</h3><p>​		Emmet语法的前身是Zen coding,它使用缩写,来提高html&#x2F;css的编写速度, Vscode内部已经集成该语法。</p>
+<p>​		快速生成HTML结构语法</p>
+<p>​		快速生成CSS样式语法</p>
+<h3 id="2、快速生成HTML结构语法"><a href="#2、快速生成HTML结构语法" class="headerlink" title="2、快速生成HTML结构语法"></a>2、快速生成HTML结构语法</h3><ul>
+<li>生成标签 直接输入标签名 按tab键即可   比如  div   然后tab 键， 就可以生成 <div></div></li>
+<li>如果想要生成多个相同标签  加上 * 就可以了 比如   div*3  就可以快速生成3个div</li>
+<li>如果有父子级关系的标签，可以用 &gt;  比如   ul &gt; li就可以了</li>
+<li>如果有兄弟关系的标签，用  +  就可以了 比如 div+p  </li>
+<li>如果生成带有类名或者id名字的，  直接写  .demo  或者  #two   tab 键就可以了（对div而言）其他标签 例：p.one  p#one</li>
+<li>如果生成的div 类名是有顺序的， 可以用 自增符号  $ </li>
+<li>如果想要在生成的标签内部写内容可以用  { }  表示</li>
+</ul>
+<h3 id="3、快速生成CSS样式语法"><a href="#3、快速生成CSS样式语法" class="headerlink" title="3、快速生成CSS样式语法"></a>3、快速生成CSS样式语法</h3><p>CSS 基本采取简写形式即可</p>
+<p>​		比如 w200   按tab  可以 生成  width: 200px;</p>
+<p>​		比如 lh26px   按tab  可以生成  line-height: 26px;</p>
+<h3 id="4、快速格式化代码"><a href="#4、快速格式化代码" class="headerlink" title="4、快速格式化代码"></a>4、快速格式化代码</h3><p>Vscode  快速格式化代码:   shift+alt+f</p>
+<p>也可以设置 当我们 保存页面的时候自动格式化代码:</p>
+<p>1）文件 ——.&gt;【首选项】———-&gt;【设置】；</p>
+<p>2）搜索emmet.include;</p>
+<p>3）在settings.json下的【工作区设置】中添加以下语句：</p>
+<p>​		“editor.formatOnType”: true,</p>
+<p>​		“editor.formatOnSave”: true</p>
+<h2 id="二、css的复合选择器"><a href="#二、css的复合选择器" class="headerlink" title="二、css的复合选择器"></a>二、css的复合选择器</h2><h3 id="1、什么是复合选择器？"><a href="#1、什么是复合选择器？" class="headerlink" title="1、什么是复合选择器？"></a>1、什么是复合选择器？</h3><p>​		在 CSS 中，可以根据选择器的类型把选择器分为<em><strong>基础选择器</strong></em>和<em><strong>复合选择器</strong></em>，复合选择器是建立在基础选择器之上，对基本选择器进行组合形成的。<br>​		复合选择器是由两个或多个基础选择器，通过不同的方式组合而成的，可以更准确、更高效的选择目标元素（标签）<br>​		常用的复合选择器包括：<strong>后代选择器、子选择器、并集选择器、伪类选择器</strong>等等</p>
+<h3 id="2、后代选择器-重要）"><a href="#2、后代选择器-重要）" class="headerlink" title="2、后代选择器 (重要）"></a>2、后代选择器 (重要）</h3><p><strong>定义：</strong></p>
+<p>​		后代选择器又称为包含选择器，可以选择父元素里面子元素。其写法就是把外层标签写在前面，内层标签写在后面，中间用空格分隔。当标签发生嵌套时，内层标签就成为外层标签的后代。</p>
+<p><strong>语法：</strong></p>
+<p><img src="/images/01.png" alt="1570867555401"></p>
+<p>​		上述语法表示选择元素 1 里面的所有元素 2 (后代元素)。</p>
+<p><strong>语法说明</strong>：</p>
+<ul>
+<li>元素1 和 元素2 中间用空格隔开</li>
+<li>元素1 是父级，元素2 是子级，最终选择的是元素2</li>
+<li>元素2 可以是儿子，也可以是孙子(ul li a)等，只要是元素1 的后代即可</li>
+<li>元素1 和 元素2 可以是任意基础选择器</li>
+</ul>
+<p><strong>例子：</strong></p>
+<p><img src="/images/02.png" alt="1570867652832"></p>
+<h3 id="3、子选择器-重要）"><a href="#3、子选择器-重要）" class="headerlink" title="3、子选择器 (重要）"></a>3、子选择器 (重要）</h3><p><strong>定义：</strong></p>
+<p>​		子元素选择器（子选择器）只能选择作为某元素的最近一级子元素。</p>
+<p>​		（简单理解就是选亲儿子元素）</p>
+<p><strong>语法：</strong></p>
+<img src="images/03.png"/>
+
+<p>​		上述语法表示选择元素1 里面的所有直接后代(子元素) 元素2。</p>
+<p><strong>语法说明</strong>：</p>
+<ul>
+<li>元素1 和 元素2 中间用 大于号 隔开</li>
+<li>元素1 是父级，元素2 是子级，最终选择的是元素2</li>
+<li>元素2 必须是亲儿子，其孙子、重孙之类都不归他管. 你也可以叫他 亲儿子选择器</li>
+</ul>
+<p><strong>例子：</strong></p>
+<p><img src="/images/04.png" alt="1570867652832"></p>
+<h3 id="4、并集选择器-重要）"><a href="#4、并集选择器-重要）" class="headerlink" title="4、并集选择器 (重要）"></a>4、并集选择器 (重要）</h3><p><strong>定义：</strong></p>
+<p>​		并集选择器可以选择多组标签, 同时为他们定义相同的样式，通常用于集体声明。并集选择器是各选择器通过英文逗号（,）连接而成，任何形式的选择器都可以作为并集选择器的一部分。</p>
+<p><strong>语法：</strong></p>
+<img src="images/05.png"/>
+
+<p>​		上述语法表示选择元素1 和 元素2。</p>
+<p><strong>语法说明</strong>：</p>
+<ul>
+<li>元素1 和 元素2 中间用逗号隔开</li>
+<li>逗号可以理解为和的意思</li>
+<li>并集选择器通常用于集体声明</li>
+</ul>
+<p><strong>例子：</strong></p>
+<p><img src="/images/06.png" alt="1570867652832"></p>
+<h3 id="5、伪类选择器"><a href="#5、伪类选择器" class="headerlink" title="5、伪类选择器"></a>5、伪类选择器</h3><p><strong>定义：</strong></p>
+<p>​		伪类选择器用于向某些选择器添加特殊的效果，比如给链接添加特殊效果，或选择第1个，第n个元素。</p>
+<p><strong>语法：</strong></p>
+<p>​		伪类选择器书写最大的特点是用冒号（:）表示，比如 :hover 、 :first-child 。</p>
+<h3 id="6、链接伪类选择器"><a href="#6、链接伪类选择器" class="headerlink" title="6、链接伪类选择器"></a>6、链接伪类选择器</h3><p><strong>定义：</strong></p>
+<p>​		伪类选择器用于向某些选择器添加特殊的效果，比如给链接添加特殊效果，或选择第1个，第n个元素。</p>
+<p><strong>语法：</strong></p>
+<p>​		伪类选择器书写最大的特点是用冒号（:）表示，比如 :hover 、 :first-child 。</p>
+<p>​		a:link	没有点击过的(访问过的)链接<br>​		a:visited	点击过的(访问过的)链接<br>​		a:hover	鼠标经过的那个链接<br>​		a:active	鼠标正在按下还没有弹起鼠标的那个链接</p>
+<p><strong>链接伪类选择器注意事项</strong></p>
+<p>​		为了确保生效，请按照 LVHA 的循顺序声明 :link－:visited－:hover－:active。</p>
+<p>​		记忆法：love hate 或者 lv 包包 hao 。</p>
+<p>​		因为 a 链接在浏览器中具有默认样式，所以我们实际工作中都需要给链接单独指定样式。</p>
+<p><strong>链接伪类选择器实际工作开发中的写法</strong>：</p>
+<p><img src="/images/1570868845786.png" alt="1570868845786"></p>
+<h3 id="7、-focus-伪类选择器"><a href="#7、-focus-伪类选择器" class="headerlink" title="7、:focus 伪类选择器"></a>7、:focus 伪类选择器</h3><p><strong>定义：</strong></p>
+<p>​		:focus 伪类选择器用于选取获得焦点的表单元素。</p>
+<p>​		焦点就是光标，一般情况 <input> 类表单元素才能获取</p>
+<p>例子：</p>
+<p><img src="/images/1570868891669.png" alt="1570868891669"></p>
+<h3 id="复合选择器总结"><a href="#复合选择器总结" class="headerlink" title="复合选择器总结"></a>复合选择器总结</h3><p><img src="/images/1570868930472.png" alt="1570868930472"></p>
+<h2 id="三、css的显示模式"><a href="#三、css的显示模式" class="headerlink" title="三、css的显示模式"></a>三、css的显示模式</h2><h3 id="1、什么是元素的显示模式"><a href="#1、什么是元素的显示模式" class="headerlink" title="1、什么是元素的显示模式"></a>1、什么是元素的显示模式</h3><p><strong>定义：</strong></p>
+<p>​		元素显示模式就是元素（标签）以什么方式进行显示，比如<div>自己占一行，比如一行可以放多个<span>。</p>
+<p><strong>作用：</strong></p>
+<p>​		网页的标签非常多，在不同地方会用到不同类型的标签，了解他们的特点可以更好的布局我们的网页。</p>
+<h3 id="2、元素显示模式的分类"><a href="#2、元素显示模式的分类" class="headerlink" title="2、元素显示模式的分类"></a>2、元素显示模式的分类</h3><h4 id="2-1、块元素"><a href="#2-1、块元素" class="headerlink" title="2.1、块元素"></a>2.1、块元素</h4><p><strong>常见的块元素</strong>：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;h1&gt;~&lt;h6&gt;、&lt;p&gt;、&lt;div&gt;、&lt;ul&gt;、&lt;ol&gt;、&lt;li&gt;</span><br></pre></td></tr></table></figure>
+
+<p>​		<div> 标签是最典型的块元素。</p>
+<p><strong>块级元素的特点</strong>：</p>
+<ul>
+<li>比较霸道，自己独占一行。</li>
+<li>高度，宽度、外边距以及内边距都可以控制。</li>
+<li>宽度默认是容器（父级宽度）的100%。不指定宽度时</li>
+<li>是一个容器及盒子，里面可以放行内或者块级元素。</li>
+</ul>
+<p><strong>注意：</strong></p>
+<p>​		文字类的元素内不能放块级元素</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt; 标签主要用于存放文字，因此 &lt;p&gt; 里面不能放块级元素，特别是不能放&lt;div&gt; </span><br><span class="line">同理， &lt;h1&gt;~&lt;h6&gt;等都是文字类块级标签，里面也不能放其他块级元素</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="2-2、行内元素"><a href="#2-2、行内元素" class="headerlink" title="2.2、行内元素"></a>2.2、行内元素</h4><p><strong>常见的行内元素：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a&gt;、&lt;strong&gt;、&lt;b&gt;、&lt;em&gt;、&lt;i&gt;、&lt;del&gt;、&lt;s&gt;、&lt;ins&gt;、&lt;u&gt;、&lt;span&gt;</span><br></pre></td></tr></table></figure>
+
+<p>​		<span> 标签是最典型的行内元素。有的地方也将行内元素称为内联元素。</p>
+<p><strong>行内元素的特点：</strong></p>
+<ul>
+<li><p>相邻行内元素在一行上，一行可以显示多个。</p>
+</li>
+<li><p>高、宽直接设置是无效的。</p>
+</li>
+<li><p>默认宽度就是它本身内容的宽度。</p>
+</li>
+<li><p>行内元素只能容纳文本或其他行内元素。不能放块级元素。</p>
+</li>
+</ul>
+<p><strong>注意：</strong><br>        链接里面不能再放链接<br>        特殊情况链接 <a> 里面可以放块级元素，但是给 <a> 转换一下块级模式最安全</p>
+<h4 id="2-3、行内块元素"><a href="#2-3、行内块元素" class="headerlink" title="2.3、行内块元素"></a>2.3、行内块元素</h4><p><strong>常见的行内块标签</strong>：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img /&gt;、&lt;input /&gt;、&lt;td&gt;</span><br></pre></td></tr></table></figure>
+
+<p>​		它们同时具有块元素和行内元素的特点。有些资料称它们为行内块元素。</p>
+<p><strong>行内块元素的特点</strong>：</p>
+<ul>
+<li>和相邻行内元素（行内块）在一行上，但是他们之间会有空白缝隙。</li>
+<li>一行可以显示多个（行内元素特点）。</li>
+<li>默认宽度就是它本身内容的宽度（行内元素特点）。</li>
+<li>高度，行高、外边距以及内边距都可以控制（块级元素特点）。</li>
+</ul>
+<h4 id="2-4、元素显示模式总结"><a href="#2-4、元素显示模式总结" class="headerlink" title="2.4、元素显示模式总结"></a>2.4、元素显示模式总结</h4><p><img src="/images/1570870718415.png" alt="1570870718415"></p>
+<p>​		学习元素显示模式的主要目的就是分清它们各自的特点，当我们网页布局的时候，在合适的地方用合适的标签元素。</p>
+<h3 id="3、元素显示模式的转换"><a href="#3、元素显示模式的转换" class="headerlink" title="3、元素显示模式的转换"></a>3、元素显示模式的转换</h3><p><strong>简单理解</strong>: </p>
+<p>​		一个模式的元素需要另外一种模式的特性<br>​		比如想要增加链接 <a> 的触发范围。   </p>
+<p><strong>转换方式</strong></p>
+<ul>
+<li>转换为块元素：display:block;</li>
+<li>转换为行内元素：display:inline;</li>
+<li>转换为行内块：display: inline-block;</li>
+</ul>
+<h3 id="4、单行文字垂直居中的代码"><a href="#4、单行文字垂直居中的代码" class="headerlink" title="4、单行文字垂直居中的代码"></a>4、单行文字垂直居中的代码</h3><p><strong>解决方案</strong>:    </p>
+<p>​		让文字的行高等于盒子的高度  就可以让文字在当前盒子内垂直居中</p>
+<p><img src="/images/1570870368253.png" alt="1570870368253"></p>
+<p><img src="/images/1570870387089.png" alt="1570870387089"></p>
+<p><strong>简单理解</strong>: </p>
+<p>​		行高的上空隙和下空隙把文字挤到中间了，</p>
+<p>​		如果行高小于盒子高度,文字会偏上，</p>
+<p>​		如果行高大于盒子高度,则文字偏下。</p>
+<h2 id="四、css的背景"><a href="#四、css的背景" class="headerlink" title="四、css的背景"></a>四、css的背景</h2><p>通过 CSS 背景属性，可以给页面元素添加背景样式。<br>背景属性可以设置背景颜色、背景图片、背景平铺、背景图片位置、背景图像固定等。</p>
+<h3 id="1、背景颜色"><a href="#1、背景颜色" class="headerlink" title="1、背景颜色"></a>1、背景颜色</h3><p><strong>样式名称</strong>：</p>
+<p>​		background-color 定义元素的背景颜色</p>
+<p><strong>使用方式</strong>：</p>
+<p><img src="/images/1570886137899.png" alt="1570886137899"></p>
+<p><strong>其他说明</strong>：</p>
+<p>​		元素背景颜色默认值是 transparent（透明）</p>
+<p><img src="/images/1570886176292.png" alt="1570886176292"></p>
+<h3 id="2、背景图片"><a href="#2、背景图片" class="headerlink" title="2、背景图片"></a>2、背景图片</h3><p><strong>样式名称</strong>：</p>
+<p>​		background-image  定义元素的背景图片</p>
+<p><strong>使用方式</strong>：</p>
+<p><img src="/images/1570886322557.png" alt="1570886322557"></p>
+<p><img src="/images/1570886362813.png" alt="1570886362813"></p>
+<p><strong>其他说明</strong>：</p>
+<p>​		实际开发常见于 logo 或者一些装饰性的小图片或者是超大的背景图片, 优点是非常便于控制位置. (精灵图也是一种运用场景)</p>
+<p>​		注意：背景图片后面的地址，千万不要忘记加 URL， 同时里面的路径<strong>不要加引号</strong>。</p>
+<h3 id="3、背景平铺"><a href="#3、背景平铺" class="headerlink" title="3、背景平铺"></a>3、背景平铺</h3><p><strong>样式名称：</strong></p>
+<p>​		background-repeat 设置元素背景图像的平铺 </p>
+<p>​               no-repeat只有1个图标</p>
+<p><strong>使用方式：</strong></p>
+<p><img src="/images/1570886648887.png" alt="1570886648887"></p>
+<p><img src="/images/1570886688306.png" alt="1570886688306"></p>
+<h3 id="4、背景图片位置"><a href="#4、背景图片位置" class="headerlink" title="4、背景图片位置"></a>4、背景图片位置</h3><p><strong>样式名称：</strong></p>
+<p>​		background-position 属性可以改变图片在背景中的位置</p>
+<p><strong>使用方式：</strong></p>
+<p>​		<img src="/images/1570886973530.png" alt="1570886973530"></p>
+<p>​		参数代表的意思是：x 坐标和 y 坐标。 可以使用 方位名词 或者 精确单位</p>
+<p><img src="/images/1570887034135.png" alt="1570887034135"></p>
+<p><strong>其他说明：</strong></p>
+<p>1、参数是方位名词</p>
+<p>​		如果指定的两个值都是方位名词，则两个值前后顺序无关，比如 left  top 和 top  left 效果一致</p>
+<p>​		如果只指定了一个方位名词，另一个值省略，则第二个值默认居中对齐</p>
+<p>2、参数是精确单位</p>
+<p>​		如果参数值是精确坐标，那么第一个肯定是 x 坐标，第二个一定是 y 坐标</p>
+<p>​		如果只指定一个数值，那该数值一定是 x 坐标，另一个默认垂直居中</p>
+<p>3、参数是混合单位</p>
+<p>​		如果指定的两个值是精确单位和方位名词混合使用，则第一个值是 x 坐标，第二个值是 y 坐标</p>
+<h3 id="5、背景图片固定"><a href="#5、背景图片固定" class="headerlink" title="5、背景图片固定"></a>5、背景图片固定</h3><p><strong>样式名称：</strong></p>
+<p>​		background-attachment 属性设置背景图像是否固定或者随着页面的其余部分滚动。</p>
+<p><strong>使用方式：</strong></p>
+<p>​		<img src="/images/1570887652404.png" alt="1570887652404"></p>
+<p><img src="/images/1570887699177.png" alt="1570887699177"></p>
+<p>默认滚动</p>
+<p><strong>其他说明：</strong></p>
+<p>​		background-attachment 后期可以制作视差滚动的效果。</p>
+<h3 id="6、背景样式合写"><a href="#6、背景样式合写" class="headerlink" title="6、背景样式合写"></a>6、背景样式合写</h3><p><strong>背景合写样式：</strong></p>
+<p>​		background: 背景颜色 背景图片地址 背景平铺 背景图像滚动 背景图片位置;</p>
+<p><strong>使用方式：</strong></p>
+<p><img src="/images/1570887809455.png" alt="1570887809455"></p>
+<h3 id="7、背景色半透明"><a href="#7、背景色半透明" class="headerlink" title="7、背景色半透明"></a>7、背景色半透明</h3><p>CSS3 提供了背景颜色半透明的效果。 </p>
+<p><strong>使用方式：</strong></p>
+<p><img src="/images/1570887978061.png" alt="1570887978061"></p>
+<ul>
+<li>最后一个参数是 alpha 透明度，取值范围在 0~1之间</li>
+<li>我们习惯把 0.3 的 0 省略掉，写为 background: rgba(0, 0, 0, .3);</li>
+</ul>
+<p><strong>注意</strong>：</p>
+<ul>
+<li>背景半透明是指盒子背景半透明，盒子里面的内容不受影响</li>
+<li>CSS3 新增属性，是 IE9+ 版本浏览器才支持的，但是现在实际开发,我们不太关注兼容性写法了,可以放心使用</li>
+</ul>
+<h3 id="8、背景总结"><a href="#8、背景总结" class="headerlink" title="8、背景总结"></a>8、背景总结</h3><p><img src="/images/1570888283511.png" alt="1570888283511"></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://example.com">sunflower</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2023/12/23/CSS%E7%AC%AC%E4%BA%8C%E5%A4%A9/">http://example.com/2023/12/23/CSS%E7%AC%AC%E4%BA%8C%E5%A4%A9/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">Lucy</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="/img/favicom.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/12/23/css%E7%AC%AC03%E5%A4%A9/" title=""><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info"></div></div></a></div><div class="next-post pull-right"><a href="/2023/12/23/%E7%AC%AC%E4%B8%89%E5%A4%A9%E6%80%BB%E7%BB%93/" title=""><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info"></div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/favicom.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">sunflower</div><div class="author-info__description">世界纷扰 吾心安宁</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">24</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#css%E7%AC%AC%E4%BA%8C%E5%A4%A9"><span class="toc-number">1.</span> <span class="toc-text">css第二天</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81emmet%E8%AF%AD%E6%B3%95"><span class="toc-number">1.1.</span> <span class="toc-text">一、emmet语法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E7%AE%80%E4%BB%8B"><span class="toc-number">1.1.1.</span> <span class="toc-text">1、简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E5%BF%AB%E9%80%9F%E7%94%9F%E6%88%90HTML%E7%BB%93%E6%9E%84%E8%AF%AD%E6%B3%95"><span class="toc-number">1.1.2.</span> <span class="toc-text">2、快速生成HTML结构语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E5%BF%AB%E9%80%9F%E7%94%9F%E6%88%90CSS%E6%A0%B7%E5%BC%8F%E8%AF%AD%E6%B3%95"><span class="toc-number">1.1.3.</span> <span class="toc-text">3、快速生成CSS样式语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81%E5%BF%AB%E9%80%9F%E6%A0%BC%E5%BC%8F%E5%8C%96%E4%BB%A3%E7%A0%81"><span class="toc-number">1.1.4.</span> <span class="toc-text">4、快速格式化代码</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81css%E7%9A%84%E5%A4%8D%E5%90%88%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">1.2.</span> <span class="toc-text">二、css的复合选择器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E4%BB%80%E4%B9%88%E6%98%AF%E5%A4%8D%E5%90%88%E9%80%89%E6%8B%A9%E5%99%A8%EF%BC%9F"><span class="toc-number">1.2.1.</span> <span class="toc-text">1、什么是复合选择器？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E5%90%8E%E4%BB%A3%E9%80%89%E6%8B%A9%E5%99%A8-%E9%87%8D%E8%A6%81%EF%BC%89"><span class="toc-number">1.2.2.</span> <span class="toc-text">2、后代选择器 (重要）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E5%AD%90%E9%80%89%E6%8B%A9%E5%99%A8-%E9%87%8D%E8%A6%81%EF%BC%89"><span class="toc-number">1.2.3.</span> <span class="toc-text">3、子选择器 (重要）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81%E5%B9%B6%E9%9B%86%E9%80%89%E6%8B%A9%E5%99%A8-%E9%87%8D%E8%A6%81%EF%BC%89"><span class="toc-number">1.2.4.</span> <span class="toc-text">4、并集选择器 (重要）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5%E3%80%81%E4%BC%AA%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">1.2.5.</span> <span class="toc-text">5、伪类选择器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6%E3%80%81%E9%93%BE%E6%8E%A5%E4%BC%AA%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">1.2.6.</span> <span class="toc-text">6、链接伪类选择器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7%E3%80%81-focus-%E4%BC%AA%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">1.2.7.</span> <span class="toc-text">7、:focus 伪类选择器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%8D%E5%90%88%E9%80%89%E6%8B%A9%E5%99%A8%E6%80%BB%E7%BB%93"><span class="toc-number">1.2.8.</span> <span class="toc-text">复合选择器总结</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81css%E7%9A%84%E6%98%BE%E7%A4%BA%E6%A8%A1%E5%BC%8F"><span class="toc-number">1.3.</span> <span class="toc-text">三、css的显示模式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E4%BB%80%E4%B9%88%E6%98%AF%E5%85%83%E7%B4%A0%E7%9A%84%E6%98%BE%E7%A4%BA%E6%A8%A1%E5%BC%8F"><span class="toc-number">1.3.1.</span> <span class="toc-text">1、什么是元素的显示模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E5%85%83%E7%B4%A0%E6%98%BE%E7%A4%BA%E6%A8%A1%E5%BC%8F%E7%9A%84%E5%88%86%E7%B1%BB"><span class="toc-number">1.3.2.</span> <span class="toc-text">2、元素显示模式的分类</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1%E3%80%81%E5%9D%97%E5%85%83%E7%B4%A0"><span class="toc-number">1.3.2.1.</span> <span class="toc-text">2.1、块元素</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2%E3%80%81%E8%A1%8C%E5%86%85%E5%85%83%E7%B4%A0"><span class="toc-number">1.3.2.2.</span> <span class="toc-text">2.2、行内元素</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3%E3%80%81%E8%A1%8C%E5%86%85%E5%9D%97%E5%85%83%E7%B4%A0"><span class="toc-number">1.3.2.3.</span> <span class="toc-text">2.3、行内块元素</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-4%E3%80%81%E5%85%83%E7%B4%A0%E6%98%BE%E7%A4%BA%E6%A8%A1%E5%BC%8F%E6%80%BB%E7%BB%93"><span class="toc-number">1.3.2.4.</span> <span class="toc-text">2.4、元素显示模式总结</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E5%85%83%E7%B4%A0%E6%98%BE%E7%A4%BA%E6%A8%A1%E5%BC%8F%E7%9A%84%E8%BD%AC%E6%8D%A2"><span class="toc-number">1.3.3.</span> <span class="toc-text">3、元素显示模式的转换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81%E5%8D%95%E8%A1%8C%E6%96%87%E5%AD%97%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD%E7%9A%84%E4%BB%A3%E7%A0%81"><span class="toc-number">1.3.4.</span> <span class="toc-text">4、单行文字垂直居中的代码</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81css%E7%9A%84%E8%83%8C%E6%99%AF"><span class="toc-number">1.4.</span> <span class="toc-text">四、css的背景</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E8%83%8C%E6%99%AF%E9%A2%9C%E8%89%B2"><span class="toc-number">1.4.1.</span> <span class="toc-text">1、背景颜色</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87"><span class="toc-number">1.4.2.</span> <span class="toc-text">2、背景图片</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E8%83%8C%E6%99%AF%E5%B9%B3%E9%93%BA"><span class="toc-number">1.4.3.</span> <span class="toc-text">3、背景平铺</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87%E4%BD%8D%E7%BD%AE"><span class="toc-number">1.4.4.</span> <span class="toc-text">4、背景图片位置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5%E3%80%81%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87%E5%9B%BA%E5%AE%9A"><span class="toc-number">1.4.5.</span> <span class="toc-text">5、背景图片固定</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6%E3%80%81%E8%83%8C%E6%99%AF%E6%A0%B7%E5%BC%8F%E5%90%88%E5%86%99"><span class="toc-number">1.4.6.</span> <span class="toc-text">6、背景样式合写</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7%E3%80%81%E8%83%8C%E6%99%AF%E8%89%B2%E5%8D%8A%E9%80%8F%E6%98%8E"><span class="toc-number">1.4.7.</span> <span class="toc-text">7、背景色半透明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8%E3%80%81%E8%83%8C%E6%99%AF%E6%80%BB%E7%BB%93"><span class="toc-number">1.4.8.</span> <span class="toc-text">8、背景总结</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/12/23/MISC%E7%BB%83%E4%B9%A0%E9%A2%98%E7%9B%B8%E5%85%B3%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF/" title="无题">无题</a><time datetime="2023-12-23T09:25:24.528Z" title="发表于 2023-12-23 17:25:24">2023-12-23</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/12/23/day10-HTML5&amp;CSS3%E6%8F%90%E9%AB%98/" title="无题">无题</a><time datetime="2023-12-23T09:24:53.656Z" title="发表于 2023-12-23 17:24:53">2023-12-23</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/12/23/%E7%AC%94%E8%AE%B0-day09-%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80CSS%E7%AC%AC%E4%B8%83%E5%A4%A9/" title="无题">无题</a><time datetime="2023-12-23T09:24:37.697Z" title="发表于 2023-12-23 17:24:37">2023-12-23</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/12/23/%E7%AC%94%E8%AE%B0-day08-%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80CSS%E7%AC%AC%E5%85%AD%E5%A4%A9/" title="无题">无题</a><time datetime="2023-12-23T09:24:25.336Z" title="发表于 2023-12-23 17:24:25">2023-12-23</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/12/23/%E7%AC%94%E8%AE%B0-day07-%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80CSS%E7%AC%AC%E4%BA%94%E5%A4%A9/" title="无题">无题</a><time datetime="2023-12-23T09:24:10.002Z" title="发表于 2023-12-23 17:24:10">2023-12-23</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By sunflower</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
